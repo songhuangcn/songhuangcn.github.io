@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {%- include head.html -%}
+  <body>
+    <main class="main-content" aria-label="Content">
+      {%- unless page.url == '/' -%}
+        {%- include header.html -%}
+      {%- endunless -%}
+      <div>
+        {{ content }}
+      </div>
+    </main>
+  </body>
+</html>

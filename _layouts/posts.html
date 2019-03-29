@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+
+{%- if site.posts.size > 0 -%}
+  <div>
+    {%- for post in site.posts -%}
+      <a href="{{ post.url | relative_url }}">
+        <div>{{ post.title | escape }}</div>
+        <div class="hint mb">
+          <p>{{ post.date | date: date_format }}</p>
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+  <a href="{{ '/feed.xml' | relative_url }}">
+    <p class="rss-subscribe">subscribe via RSS</p>
+  </a>
+{%- endif -%}
