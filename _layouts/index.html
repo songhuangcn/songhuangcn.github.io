@@ -3,21 +3,18 @@ layout: default
 ---
 
 <h1>Song Huang</h1>
-
-<p>A web developer in Guangzhou, China.</p>
-
+<div class="mb">{{ site.description }}</div>
 <a href="{{ '/posts' | absolute_url }}">
-  <dl>
-    <dt>Posts</dt>
-    <dd>{{ '/posts' | absolute_url }}</dd>
-  </dl>
+  <div class="mb">
+    <div>Posts</div>
+    <div class="hint">{{ '/posts' | absolute_url }}</div>
+  </div>
 </a>
-
 <a href="https://github.com/songhuangcn">
-  <dl>
-    <dt>GitHub</dt>
-    <dd>https://github.com/songhuangcn</dd>
-  </dl>
+  <div class="mb">
+    <div>GitHub</div>
+    <div class="hint">https://github.com/songhuangcn</div>
+  </div>
 </a>
 
 <!-- * Posts: [{{ '/posts' | absolute_url }}]({{ '/posts' | absolute_url }})

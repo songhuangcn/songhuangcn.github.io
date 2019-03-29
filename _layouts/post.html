@@ -3,16 +3,17 @@ layout: default
 ---
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
+  <header class="mb">
     <h1 itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="hint">
+    <div class="hint">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+    </div>
   </header>
 
   <div itemprop="articleBody">

@@ -16,8 +16,9 @@
 title: Song Huang
 email: songhuangcn#songhuangcn.com
 description: >- # this means to ignore newlines until "baseurl:"
+  A web developer in Guangzhou, China.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://songhuangcn.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://songhuangcn.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: songhuangcn
 github_username:  songhuangcn
 permalink: /posts/:title

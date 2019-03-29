@@ -8,9 +8,9 @@ layout: default
   <div>
     {%- for post in site.posts -%}
       <a href="{{ post.url | relative_url }}">
-        <div>{{ post.title | escape }}</div>
-        <div class="hint mb">
-          <p>{{ post.date | date: date_format }}</p>
+        <div class="mb">
+          <div>{{ post.title | escape }}</div>
+          <div class="hint mb">{{ post.date | date: date_format }}</div>
         </div>
       </a>
     {%- endfor -%}
