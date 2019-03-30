@@ -3,7 +3,7 @@ title:  '一些 Ruby/Rails 小技巧续'
 tags:   [Ruby, Rails]
 ---
 
-第一篇地址在这：[一些 Ruby/Rails 小技巧](http://pinewong.com/posts/9-some-tips-of-ruby-and-rails)
+第一篇地址在这：[一些 Ruby/Rails 小技巧]({{ '/posts/9-some-tips-of-ruby-and-rails' | relative_url }})
 
 我们接着记录开发应用中遇到的一些小问题。
 
