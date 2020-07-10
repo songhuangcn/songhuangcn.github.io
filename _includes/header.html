@@ -1,0 +1,11 @@
+{%- if page.layout == 'post' -%}
+  {%- assign url = '/posts' | relative_url -%}
+  {%- assign title = '' -%}
+{%- else -%}
+  {%- assign url = '/' | relative_url -%}
+  {%- assign title = page.title | escape -%}
+{%- endif -%}
+
+<div class="mb">
+  <a href="{{ url }}"><strong>&lt; {{ title }}</strong></a>
+</div>

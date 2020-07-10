@@ -1,0 +1,31 @@
+---
+---
+
+// 覆盖
+// $body-text-color: rgba(0, 0, 0, 1);
+// $body-link-color: rgba(0, 0, 0, 0.87);
+
+// 自定义
+$base-font-size: 1rem;
+$body-hint-color: rgba(0, 0, 0, 0.54);
+
+@import 'jekyll-theme-cayman';
+
+// 工具
+.mb {
+  margin-bottom: 1.6 * $base-font-size;
+}
+
+.hint {
+  font-size: 0.8 * $base-font-size;
+  color: $body-hint-color;
+}
+
+.font-lg {
+  font-size: 1.4 * $base-font-size;
+}
+
+// 全局样式
+a:hover {
+  text-decoration: none;
+}
