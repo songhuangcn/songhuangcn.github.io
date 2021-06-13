@@ -89,4 +89,4 @@ vehicle.new.charge(1.2, 3) # => Need pay $23.6 for car vehicle.
 但模块的动态查找特性，可以实现统一约束。
 
 另外 Ruby 的类方法属于单例类（singleton_class），如果需要也做到被约束，需要像例子一样，使用模块的 `included` 钩子方法。具体原理可以参照我的上一篇文章：
-[在类或模块中引入模块的单例类方法](http://pinewong.com/posts/13-use-singleton-class-method-of-module-in-class-or-module)
+[在类或模块中引入模块的单例类方法](/posts/13-use-singleton-class-method-of-module-in-class-or-module)
