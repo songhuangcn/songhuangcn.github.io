@@ -76,13 +76,13 @@ class Api::TestApiController < Api::ApplicationController
     when '2xx'
       render_data '我是正常响应数据'
     when '4xx'
-      raise ClientError.new('我是一个 4xx 错误') # 这里常用简单异常处理很简单，使用起来跟后端渲染中的设置 flash 错误差不多简单了
+      raise ClientError.new('我是一个 4xx 错误') # 这里常用异常处理很简单，使用起来跟后端渲染中的设置 flash 错误差不多简单了
     when '5xx'
       undefined_method # 这是一个没有定义的方法或变量，这里目的是手动制造一个 5xx 异常
     when '6xx'
       raise CustomError.new(:order_create_failed, '我是业务错误 detail 信息')
     else
-      raise ClientError.new('没找到该 status 处理方式', 404)
+      raise ActionController::BadRequest, '没找到该 status 处理方式'
     end
   end
 end
@@ -229,7 +229,7 @@ request.interceptors.response.use(
       return Promise(() => {}) // 返回一个 pending 的 Promise，防止执行功能的 then 方法
     // 4xx 响应处理
     } else if (error.response.status >= 400 && error.response.status <= 499) {
-      $flash = `API Client Error: ${error.response.data.message}`
+      $flash = `API Client Error: ${error.response.data.message || error.response.status}`  // 当 4xx 错误是由 Web 服务器或者应用服务器触发的，此时没有 message 值，这里要特殊处理一下
       return Promise(() => {})
     // 5xx 响应处理
     } else if (error.response.status >= 500 && error.response.status <= 599) {
